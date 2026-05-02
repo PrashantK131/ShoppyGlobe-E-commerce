@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+/* Design Tokens for ShoppyGlobe */
+@theme {
+  --color-sage: #7c9a7e;
+  --color-sage-light: #a8c4aa;
+  --color-sage-dark: #4a6b4d;
+  --color-cream: #faf7f2;
+  --color-warm: #f5efe6;
+  --color-clay: #c4856a;
+  --color-clay-dark: #a36650;
+  --color-charcoal: #2d2d2d;
+  --color-stone: #6b6b6b;
+  --color-pebble: #e8e4de;
+
+  --font-display: "DM Serif Display", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  margin: 0;
+  padding: 0;
+}
+
+/* Lazy image fade-in */
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+img.lazy.loaded {
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { 
+  width: 6px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: var(--color-pebble); 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: var(--color-sage); border-radius: 3px; 
+}
+
+/* Smooth page transitions */
+.page-enter {
+  animation: fadeSlideUp 0.35s ease forwards;
+}
+
+@keyframes fadeSlideUp {
+  from { 
+    opacity: 0; transform: translateY(16px); 
+  }
+  to { 
+    opacity: 1; transform: translateY(0); 
+  }
+}
+
+/* Cart badge pulse */
+@keyframes badgePop {
+  0%   { 
+    transform: scale(1); 
+  } 
+  50% { 
+    transform: scale(1.3); 
+  }
+  100% { 
+    transform: scale(1); 
+  }
+}
+
+.badge-pop {
+  animation: badgePop 0.3s ease;
+}
