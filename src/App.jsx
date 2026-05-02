@@ -10,6 +10,22 @@ const Cart = lazy(() => import('./pages/Cart'));
 const Checkout = lazy(() => import('./pages/Checkout'));
 const NotFound = lazy(() => import('./components/NotFound'));
 
+// Page loading fallback spinner
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="flex gap-2">
+      {[0, 1, 2].map(i => (
+        <div key={i} className="w-3 h-3 rounded-full"
+          style={{
+            background: 'var(--color-clay)',
+            animation: `pulse 1s ${i * 0.2}s ease-in-out infinite`,
+          }}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 // Root layout — wraps all pages with Header
 const RootLayout = () => {
   const dispatch = useDispatch();
