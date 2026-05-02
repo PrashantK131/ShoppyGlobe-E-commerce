@@ -1,7 +1,10 @@
-import { lazy, Suspense, useState } from 'react'
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
-import './App.css'
+import { lazy, Suspense, useState } from 'react';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchQuery } from './store/searchSlice';
+import { selectSearchQuery } from './store/searchSlice';
 import Header from './components/Header';
+import './App.css'
 
 // Lazy-loaded page components for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -26,7 +29,7 @@ const PageLoader = () => (
   </div>
 );
 
-// Root layout — wraps all pages with Header
+// Root layout wraps all pages with Header
 const RootLayout = () => {
   const dispatch = useDispatch();
   const searchValue = useSelector(selectSearchQuery);
