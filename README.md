@@ -51,9 +51,9 @@ shoppyglobe/
     │
     ├── main.jsx                # ReactDOM entry — Redux Provider
     ├── App.jsx                 # Root component — Router + Lazy loading
-    │
-    ├── styles/
-    │   └── index.css           # Tailwind v4 import + global CSS variables
+    ├── index.css               # Tailwind v4 import + global CSS variables
+    |
+    │   
     │
     ├── store/
     │   ├── index.js            # Redux store config + localStorage subscriber
