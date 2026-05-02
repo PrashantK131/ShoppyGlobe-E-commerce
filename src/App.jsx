@@ -49,7 +49,7 @@ const RootLayout = () => {
   );
 };
 
-// Router using createBrowserRouter (data router API — better features and data handling)
+// Router using createBrowserRouter 
 const router = createBrowserRouter([
   {
     path: '/',

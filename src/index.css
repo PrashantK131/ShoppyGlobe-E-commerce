@@ -29,7 +29,7 @@ body {
   padding: 0;
 }
 
-/* Lazy image fade-in */
+/* For Lazy image fade-in */
 img.lazy {
   opacity: 0;
   transition: opacity 0.4s ease;

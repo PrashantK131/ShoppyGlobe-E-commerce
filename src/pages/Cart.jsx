@@ -16,17 +16,14 @@ function Cart() {
                 <p className="text-6xl mb-4">🛒</p>
                 <h2 className="text-3xl font-bold mb-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-charcoal)' }}>Your cart is empty</h2>
                 <p className="mb-8" style={{ color: 'var(--color-stone)' }}>Looks like you haven't added anything yet.</p>
-                <Link to="/" className="inline-block px-8 py-3 rounded-full font-semibold text-white transition-all hover:opacity-90" style={{ background: 'var(--color-charcoal)' }}>
-                    Browse Products
-                </Link>
+                <Link to="/" className="inline-block px-8 py-3 rounded-full font-semibold text-white transition-all hover:opacity-90" style={{ background: 'var(--color-charcoal)' }}>Browse Products</Link>
             </div>
         );
     }
 
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 page-enter">
-            <h1 className="text-4xl font-bold mb-8" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-charcoal)' }}>
-                Shopping Cart
+            <h1 className="text-4xl font-bold mb-8" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-charcoal)' }}>Shopping Cart
                 <span className="text-lg font-normal ml-3" style={{ color: 'var(--color-stone)' }}>
                     ({items.length} item{items.length !== 1 ? 's' : ''})
                 </span>
@@ -59,9 +56,7 @@ function Cart() {
                     <Link to="/checkout" className="mt-5 block text-center py-3 rounded-full font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5" style={{ background: 'var(--color-charcoal)' }}>
                         Proceed to Checkout
                     </Link>
-                    <Link to="/" className="mt-3 block text-center text-sm hover:underline" style={{ color: 'var(--color-stone)' }}>
-                        Continue Shopping
-                    </Link>
+                    <Link to="/" className="mt-3 block text-center text-sm hover:underline" style={{ color: 'var(--color-stone)' }}>Continue Shopping</Link>
                 </div>
             </div>
         </div>

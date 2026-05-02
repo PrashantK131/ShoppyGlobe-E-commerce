@@ -1,4 +1,4 @@
-// For displaying grid of products, filtered by Redux search state
+// For displaying grid of products, filtered by using Redux search state
 import { useSelector } from 'react-redux';
 import useProducts from '../hooks/useProducts';
 import ProductItem from './ProductItem';
@@ -65,7 +65,7 @@ function ProductList() {
                 </p>
             )}
 
-            {/* Product Grid — unique keys required */}
+            {/* Product Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {filteredProducts.map(product => (
                     <ProductItem key={product.id} product={product} />

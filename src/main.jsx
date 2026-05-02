@@ -7,7 +7,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* Redux Provider wraps the entire app */}
+    {/* Redux Provider for wrapping the entire app */}
     <Provider store={store}>
       <App />
     </Provider>

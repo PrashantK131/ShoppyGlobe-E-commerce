@@ -18,10 +18,7 @@ function NotFound() {
             </div>
 
             <h2 className="text-2xl font-semibold mb-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--color-charcoal)' }}>Page Not Found</h2>
-            <p className="mb-8 max-w-md" style={{ color: 'var(--color-stone)' }}>
-                The page you're looking for doesn't exist or has been moved. 
-                Check the URL or head back to the homepage.
-            </p>
+            <p className="mb-8 max-w-md" style={{ color: 'var(--color-stone)' }}>The page you're looking for doesn't exist or has been moved. Check the URL or head back to the homepage.</p>
 
             {/* Error Details Box */}
             <div className="mb-8 p-4 rounded-xl text-left text-sm w-full max-w-sm" style={{ background: '#fff', border: '1px solid var(--color-pebble)' }}>
@@ -33,10 +30,7 @@ function NotFound() {
                 </div>
             </div>
 
-            <Link to="/"
-                className="inline-block px-8 py-3 rounded-full font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5 active:translate-y-0"
-                style={{ background: 'var(--color-charcoal)' }}
-            >
+            <Link to="/" className="inline-block px-8 py-3 rounded-full font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5 active:translate-y-0" style={{ background: 'var(--color-charcoal)' }}>
                 ← Back to Home
             </Link>
         </div>

@@ -151,7 +151,7 @@ function Checkout() {
         setTouched(prev => ({ ...prev, [e.target.name]: true }));
     };
 
-    // On Place Order click — validate all fields first, then show modal
+    // On Place Order click validate all fields first, then show modal
     const handleSubmit = () => {
         // Mark all fields touched to show all errors at once
         const allTouched = Object.keys(form).reduce((acc, key) => ({ ...acc, [key]: true }), {});
@@ -162,7 +162,7 @@ function Checkout() {
         setShowConfirm(true); // Show confirmation modal
     };
 
-    // User confirmed — clear cart and redirect
+    // User confirmed then clear cart and redirect
     const handleConfirm = () => {
         setShowConfirm(false);
         setOrderPlaced(true);
@@ -244,8 +244,7 @@ function Checkout() {
                     <h3 className="font-bold text-lg mb-4" style={{ fontFamily: 'var(--font-display)' }}>Payment Method</h3>
                     <div className="flex flex-wrap gap-3">
                         {['card', 'upi', 'cod'].map(method => (
-                            <label key={method}
-                                className="flex items-center gap-2 px-4 py-2.5 rounded-xl border cursor-pointer transition-all text-sm font-medium"
+                            <label key={method} className="flex items-center gap-2 px-4 py-2.5 rounded-xl border cursor-pointer transition-all text-sm font-medium"
                                 style={{
                                     borderColor: form.payment === method ? 'var(--color-charcoal)' : 'var(--color-pebble)',
                                     background: form.payment === method ? 'var(--color-charcoal)' : '#fff',
@@ -300,8 +299,7 @@ function Checkout() {
                         </div>
 
                         {/* Place Order button */}
-                        <button onClick={handleSubmit}
-                            className="w-full py-3.5 rounded-full font-semibold text-white transition-all text-base"
+                        <button onClick={handleSubmit} className="w-full py-3.5 rounded-full font-semibold text-white transition-all text-base"
                             style={{
                                 background: isFormValid ? 'var(--color-clay)' : 'var(--color-stone)',
                                 cursor: isFormValid ? 'pointer' : 'not-allowed',

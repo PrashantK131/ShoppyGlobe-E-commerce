@@ -1,4 +1,4 @@
-// ProductItem.jsx — Single product card with Add to Cart button
+// Single product card with add to cart button
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, selectCartItems } from '../store/cartSlice';
@@ -12,7 +12,7 @@ function ProductItem({product}) {
     const inCart = cartItems.some(item => item.id === product.id);
 
     const handleAddToCart = (e) => {
-        e.preventDefault(); // Prevent navigation when clicking button
+        e.preventDefault(); // Prevents navigation when clicking button
         dispatch(addToCart({
             id: product.id,
             title: product.title,
@@ -35,9 +35,7 @@ function ProductItem({product}) {
                 <LazyImage src={product.thumbnail} alt={product.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
                 {/* Discount badge */}
                 {product.discountPercentage > 10 && (
-                <span className="absolute top-2 left-2 text-white text-xs font-semibold px-2 py-1 rounded-full" style={{ background: 'var(--color-clay)' }}>
-                    -{Math.round(product.discountPercentage)}%
-                </span>
+                <span className="absolute top-2 left-2 text-white text-xs font-semibold px-2 py-1 rounded-full" style={{ background: 'var(--color-clay)' }}>-{Math.round(product.discountPercentage)}%</span>
                 )}
             </div>
 

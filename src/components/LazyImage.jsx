@@ -8,7 +8,7 @@ function LazyImage({src, alt, className, style}) {
     const [loaded, setLoaded] = useState(false);
     const [inView, setInView] = useState(false);
 
-    // Use IntersectionObserver to detect when image is in viewport
+    // Using IntersectionObserver to detect when image is in viewport
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
