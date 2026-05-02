@@ -1,12 +1,14 @@
-import { Suspense, useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header';
-import Home from './pages/Home';
-import ProductDetail from './pages/ProductDetail';
-import Cart from './pages/Cart';
-import Checkout from './pages/Checkout';
-import NotFound from './components/NotFound';
+
+// Lazy-loaded page components for code splitting
+const Home = lazy(() => import('./pages/Home'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail'));
+const Cart = lazy(() => import('./pages/Cart'));
+const Checkout = lazy(() => import('./pages/Checkout'));
+const NotFound = lazy(() => import('./components/NotFound'));
 
 // Root layout — wraps all pages with Header
 const RootLayout = () => {
